@@ -4,7 +4,6 @@
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
-        "locked": true,
         "info": "",
         "env": []
     },
