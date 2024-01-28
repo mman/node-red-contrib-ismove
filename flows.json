@@ -4,14 +4,7 @@
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "b6dfba21d677f3ef",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
+        "locked": true,
         "info": "",
         "env": []
     },
