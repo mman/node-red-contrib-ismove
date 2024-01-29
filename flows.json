@@ -4,6 +4,7 @@
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
+        "locked": true,
         "info": "",
         "env": []
     },
@@ -35,10 +36,10 @@
             "groupOutline": "#cccccc"
         },
         "sizes": {
-            "pagePadding": "12px",
-            "groupGap": "12px",
+            "pagePadding": "10px",
+            "groupGap": "10px",
             "groupBorderRadius": "4px",
-            "widgetGap": "24px"
+            "widgetGap": "0px"
         }
     },
     {
@@ -176,20 +177,6 @@
         "disabled": "false"
     },
     {
-        "id": "0d8a27cf9b710e56",
-        "type": "ui-page",
-        "name": "Diagnostics",
-        "ui": "718f5fabaac10b79",
-        "path": "/diagnostics",
-        "icon": "anchor",
-        "layout": "grid",
-        "theme": "65d08f24e020703e",
-        "order": -1,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
         "id": "ac3765750752ad30",
         "type": "ui-group",
         "name": "Coffee Machine",
@@ -225,16 +212,16 @@
         "order": 3,
         "width": 0,
         "height": 0,
-        "columns": "1",
+        "columns": "2",
         "passthru": false,
         "options": [
             {
-                "label": "Off",
+                "label": "OFF",
                 "value": 4,
                 "type": "num"
             },
             {
-                "label": "On",
+                "label": "ON",
                 "value": 3,
                 "type": "num"
             }
@@ -369,7 +356,7 @@
         "type": "ui-radio-group",
         "z": "f8aa3235cf2ec5d8",
         "d": true,
-        "group": "b5a02095750de218",
+        "group": "ac3765750752ad30",
         "name": "",
         "label": "",
         "order": 4,
@@ -674,7 +661,7 @@
         ],
         "width": "3",
         "height": "5",
-        "className": "",
+        "className": "my-chart-vertical-large",
         "x": 920,
         "y": 820,
         "wires": [
@@ -718,7 +705,7 @@
         ],
         "width": "3",
         "height": "5",
-        "className": "",
+        "className": "my-chart-vertical-large",
         "x": 920,
         "y": 880,
         "wires": [
@@ -1072,7 +1059,7 @@
         "xAxisType": "time",
         "yAxisProperty": "",
         "ymin": "0",
-        "ymax": "100",
+        "ymax": "200",
         "action": "append",
         "pointShape": "circle",
         "pointRadius": "0",
@@ -1081,11 +1068,11 @@
         "removeOlderUnit": "86400",
         "removeOlderPoints": "",
         "colors": [
+            "#ffb3d7",
+            "#ffb3d7",
             "#ff2f92",
             "#ff2f92",
-            "#ff9300",
-            "#2ca02c",
-            "#98df8a",
+            "#ff2f92",
             "#d62728",
             "#ff9896",
             "#9467bd",
@@ -1094,8 +1081,8 @@
         "width": "6",
         "height": "6",
         "className": "",
-        "x": 1700,
-        "y": 960,
+        "x": 1940,
+        "y": 900,
         "wires": [
             []
         ]
@@ -1206,7 +1193,8 @@
         "wires": [
             [
                 "16279e1b0e5369bf",
-                "53f93ddbaa785228"
+                "53f93ddbaa785228",
+                "985575374b7203b9"
             ]
         ]
     },
@@ -1307,7 +1295,8 @@
         "wires": [
             [
                 "41cc0c8ffc83553e",
-                "936691a3fed1656d"
+                "936691a3fed1656d",
+                "985575374b7203b9"
             ]
         ]
     },
@@ -1986,7 +1975,7 @@
         "colors": [
             "#ff2f92",
             "#ff2f92",
-            "#ff7f0e",
+            "#ff40ff",
             "#2ca02c",
             "#98df8a",
             "#d62728",
@@ -1995,7 +1984,7 @@
             "#c5b0d5"
         ],
         "width": "3",
-        "height": "3",
+        "height": "1",
         "className": "",
         "x": 1700,
         "y": 1300,
@@ -2069,7 +2058,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "div.my-row-span-3 {\n    grid-row-end: span 3;\n}\n",
+        "format": "div.my-row-span-3 {\n    grid-row-end: span 3;\n}\n\ndiv.my-chart-vertical-large {\n    height: 278px;\n}",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -2108,7 +2097,7 @@
         "colors": [
             "#0096ff",
             "#0096ff",
-            "#ff7f0e",
+            "#0433ff",
             "#2ca02c",
             "#98df8a",
             "#d62728",
@@ -2142,8 +2131,8 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 1280,
-        "y": 920,
+        "x": 1520,
+        "y": 900,
         "wires": [
             [
                 "91a05c7285d41477"
@@ -2167,8 +2156,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1490,
-        "y": 920,
+        "x": 1710,
+        "y": 900,
         "wires": [
             [
                 "532f8cf32bd3497c"
@@ -2192,8 +2181,8 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 1280,
-        "y": 1000,
+        "x": 1520,
+        "y": 960,
         "wires": [
             [
                 "23943d43eaccc13d"
@@ -2217,11 +2206,310 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1490,
-        "y": 1000,
+        "x": 1710,
+        "y": 960,
         "wires": [
             [
                 "532f8cf32bd3497c"
+            ]
+        ]
+    },
+    {
+        "id": "985575374b7203b9",
+        "type": "join",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1230,
+        "y": 840,
+        "wires": [
+            [
+                "111c598ba566e53c"
+            ]
+        ]
+    },
+    {
+        "id": "111c598ba566e53c",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "sum",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Tank Sum",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$lookup(payload, \"Tank 1\") + $lookup(payload, \"Tank 2\")",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1350,
+        "y": 840,
+        "wires": [
+            [
+                "f594c52153c1569a",
+                "dc3cf8913664907c"
+            ]
+        ]
+    },
+    {
+        "id": "f594c52153c1569a",
+        "type": "delay",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1520,
+        "y": 840,
+        "wires": [
+            [
+                "14211c1fbfee9c71"
+            ]
+        ]
+    },
+    {
+        "id": "14211c1fbfee9c71",
+        "type": "trigger",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "-10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1710,
+        "y": 840,
+        "wires": [
+            [
+                "532f8cf32bd3497c"
+            ]
+        ]
+    },
+    {
+        "id": "e86322029b8c2163",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(-payload / rate)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2020,
+        "y": 780,
+        "wires": [
+            [
+                "604cf414bf88090e",
+                "fcaa3a6729bb96de"
+            ]
+        ]
+    },
+    {
+        "id": "604cf414bf88090e",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2240,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "fcaa3a6729bb96de",
+        "type": "humanizer",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "input": "",
+        "x": 2250,
+        "y": 780,
+        "wires": [
+            [
+                "ac0e4f80a45dfa0d",
+                "a1e16f7256a0283c"
+            ]
+        ]
+    },
+    {
+        "id": "ac0e4f80a45dfa0d",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2480,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "75fdd7eb37877cc9",
+        "type": "function",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "compute rate of change",
+        "func": "// prepare array to hold samples with timestamps\nvar samples = context.get(\"samples\") || [];\n\n// remember incoming sample and forget oldest sample\n// keep 60 samples, assuming one hour of history\n// when messages coming in at rate 1 per minute\nsamples.push({value: msg.payload, timestamp: Date.now()});\nif (samples.length > 60) {\n    samples.shift();\n}\n\n// store samples\ncontext.set(\"samples\", samples);\n\n// get oldest and newest sample\nlet previousSample = samples[0];\nlet currentSample = samples[samples.length - 1];\n\nmsg.difference = currentSample.value - previousSample.value;\nmsg.duration = currentSample.timestamp - previousSample.timestamp;\n\n// duration between oldest and newest sample\n// assume one hour if not enough samples collected\nvar duration = msg.duration; \nif (duration <= 0) {\n    duration = 60*60*1000;\n}\n\n// difference between oldest and newest sample\n// assume 1 percent per one hour if not enough samples collected\nvar difference = msg.difference;\nif (difference <= 0) {\n    difference = duration / (60*60*1000);\n}\n\n// compute rate\nmsg.rate = 1000.0 * difference / duration;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1730,
+        "y": 780,
+        "wires": [
+            [
+                "a5e32179a5feb459",
+                "e86322029b8c2163"
+            ]
+        ]
+    },
+    {
+        "id": "bfdb4ad5f8fe8420",
+        "type": "ui-text",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "b5a02095750de218",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "20",
+        "color": "#444444",
+        "className": "",
+        "x": 2670,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "a1e16f7256a0283c",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.humanized",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2500,
+        "y": 780,
+        "wires": [
+            [
+                "bfdb4ad5f8fe8420"
+            ]
+        ]
+    },
+    {
+        "id": "a5e32179a5feb459",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "msg.duration & \", \" & msg.rate",
+        "statusType": "auto",
+        "x": 2000,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "dc3cf8913664907c",
+        "type": "delay",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1520,
+        "y": 780,
+        "wires": [
+            [
+                "75fdd7eb37877cc9"
             ]
         ]
     }
