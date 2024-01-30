@@ -4,7 +4,6 @@
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
-        "locked": true,
         "info": "",
         "env": []
     },
@@ -166,7 +165,7 @@
     {
         "id": "a50cae230ad147cc",
         "type": "ui-group",
-        "name": "Tank Level [%]",
+        "name": "Gas Level [%]",
         "page": "4a46055ef71bd0a1",
         "width": "6",
         "height": "1",
@@ -192,7 +191,7 @@
     {
         "id": "3f46b93f98d0309b",
         "type": "ui-group",
-        "name": "Battery Level [%]",
+        "name": "Battery [%]",
         "page": "4a46055ef71bd0a1",
         "width": "3",
         "height": "1",
@@ -2479,10 +2478,10 @@
         "active": false,
         "tosidebar": true,
         "console": false,
-        "tostatus": true,
+        "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "statusVal": "msg.duration & \", \" & msg.rate",
+        "statusVal": "",
         "statusType": "auto",
         "x": 2000,
         "y": 680,
