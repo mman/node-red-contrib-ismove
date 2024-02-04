@@ -216,7 +216,7 @@
         "options": [
             {
                 "label": "OFF",
-                "value": 4,
+                "value": 1,
                 "type": "num"
             },
             {
@@ -497,10 +497,10 @@
         "xAxisType": "time",
         "yAxisProperty": "",
         "ymin": "0",
-        "ymax": "100",
+        "ymax": "101",
         "action": "append",
-        "pointShape": "circle",
-        "pointRadius": "0",
+        "pointShape": "line",
+        "pointRadius": "1",
         "showLegend": false,
         "removeOlder": "3",
         "removeOlderUnit": "86400",
@@ -594,10 +594,10 @@
         "xAxisPropertyType": "msg",
         "xAxisType": "time",
         "yAxisProperty": "",
-        "ymin": "0",
+        "ymin": "-2",
         "ymax": "500",
         "action": "append",
-        "pointShape": "circle",
+        "pointShape": "line",
         "pointRadius": "0",
         "showLegend": false,
         "removeOlder": "3",
@@ -849,7 +849,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "$round(msg.payload * 1000) & \" Wh\" & \" (\" & $ceil(msg.payload / 13*200) & \"%)\"",
+                "to": "$round(msg.payload * 1000) & \" Wh\" & \" (\" & $round((msg.payload * 0.038 * 1000)) & \"%)\"",
                 "tot": "jsonata"
             }
         ],
@@ -1057,18 +1057,18 @@
         "xAxisPropertyType": "msg",
         "xAxisType": "time",
         "yAxisProperty": "",
-        "ymin": "0",
-        "ymax": "200",
+        "ymin": "-2",
+        "ymax": "204",
         "action": "append",
-        "pointShape": "circle",
+        "pointShape": "line",
         "pointRadius": "0",
         "showLegend": false,
         "removeOlder": "3",
         "removeOlderUnit": "86400",
         "removeOlderPoints": "",
         "colors": [
-            "#ffb3d7",
-            "#ffb3d7",
+            "#ff2e91",
+            "#ff80bc",
             "#ff2f92",
             "#ff2f92",
             "#ff2f92",
@@ -2251,14 +2251,14 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "Tank Sum",
+                "to": "Total",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "$lookup(payload, \"Tank 1\") + $lookup(payload, \"Tank 2\")",
+                "to": "$lookup(payload, \"Tank 1\") + $lookup(payload, \"Tank 2\") + 2",
                 "tot": "jsonata"
             }
         ],
@@ -2327,47 +2327,20 @@
         ]
     },
     {
-        "id": "e86322029b8c2163",
-        "type": "change",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$round(-payload / rate)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2020,
-        "y": 780,
-        "wires": [
-            [
-                "604cf414bf88090e",
-                "fcaa3a6729bb96de"
-            ]
-        ]
-    },
-    {
         "id": "604cf414bf88090e",
         "type": "debug",
         "z": "f8aa3235cf2ec5d8",
-        "name": "debug 9",
+        "name": "LPG ttg",
         "active": false,
         "tosidebar": true,
         "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
         "statusType": "auto",
         "x": 2240,
-        "y": 840,
+        "y": 860,
         "wires": []
     },
     {
@@ -2389,16 +2362,17 @@
         "id": "ac0e4f80a45dfa0d",
         "type": "debug",
         "z": "f8aa3235cf2ec5d8",
-        "name": "debug 10",
+        "name": "LPG ttg humanized",
         "active": false,
         "tosidebar": true,
         "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
+        "tostatus": true,
+        "complete": "payload.humanized",
+        "targetType": "msg",
+        "statusVal": "payload",
         "statusType": "auto",
-        "x": 2480,
-        "y": 720,
+        "x": 2510,
+        "y": 700,
         "wires": []
     },
     {
@@ -2406,7 +2380,7 @@
         "type": "function",
         "z": "f8aa3235cf2ec5d8",
         "name": "compute rate of change",
-        "func": "// prepare array to hold samples with timestamps\nvar samples = context.get(\"samples\") || [];\n\n// remember incoming sample and forget oldest sample\n// keep 60 samples, assuming one hour of history\n// when messages coming in at rate 1 per minute\nsamples.push({value: msg.payload, timestamp: Date.now()});\nif (samples.length > 60) {\n    samples.shift();\n}\n\n// store samples\ncontext.set(\"samples\", samples);\n\n// get oldest and newest sample\nlet previousSample = samples[0];\nlet currentSample = samples[samples.length - 1];\n\nmsg.difference = currentSample.value - previousSample.value;\nmsg.duration = currentSample.timestamp - previousSample.timestamp;\n\n// duration between oldest and newest sample\n// assume one hour if not enough samples collected\nvar duration = msg.duration; \nif (duration <= 0) {\n    duration = 60*60*1000;\n}\n\n// difference between oldest and newest sample\n// assume 1 percent per one hour if not enough samples collected\nvar difference = msg.difference;\nif (difference <= 0) {\n    difference = duration / (60*60*1000);\n}\n\n// compute rate\nmsg.rate = 1000.0 * difference / duration;\n\nreturn msg;",
+        "func": "// prepare array to hold samples with timestamps\nvar samples = context.get(\"samples\") || [];\n\n// remember incoming sample and forget oldest sample\n// keep 60 samples, assuming one hour of history\n// when messages coming in at rate 1 per minute\nsamples.push({value: msg.payload, timestamp: Date.now()});\nif (samples.length > 60) {\n    samples.shift();\n}\n\n// store samples\ncontext.set(\"samples\", samples);\n\n// get oldest and newest sample\nlet previousSample = samples[0];\nlet currentSample = samples[samples.length - 1];\n\nmsg.previousSample = previousSample;\nmsg.currentSample = currentSample;\n\nmsg.difference = currentSample.value - previousSample.value;\nmsg.duration = currentSample.timestamp - previousSample.timestamp;\n\n// duration between oldest and newest sample\n// assume one hour if not enough samples collected\nvar duration = msg.duration; \nif (duration <= 0) {\n    duration = 60*60*1000;\n}\n\n// difference between oldest and newest sample\n// assume 1 percent per one hour if not enough samples collected\n// or if tanks being filled (positive difference)\nvar difference = msg.difference;\nif (difference >= 0) {\n    difference = duration / (60*60*1000) * -1;\n}\n\n// compute rate\nmsg.rate = 1000.0 * difference / duration;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2509,6 +2483,34 @@
         "wires": [
             [
                 "75fdd7eb37877cc9"
+            ]
+        ]
+    },
+    {
+        "id": "e86322029b8c2163",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(-payload / rate)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2020,
+        "y": 780,
+        "wires": [
+            [
+                "604cf414bf88090e",
+                "fcaa3a6729bb96de"
             ]
         ]
     }
