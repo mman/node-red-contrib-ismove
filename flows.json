@@ -1081,7 +1081,7 @@
         "height": "6",
         "className": "",
         "x": 1940,
-        "y": 900,
+        "y": 840,
         "wires": [
             []
         ]
@@ -1192,7 +1192,6 @@
         "wires": [
             [
                 "16279e1b0e5369bf",
-                "53f93ddbaa785228",
                 "985575374b7203b9"
             ]
         ]
@@ -1294,7 +1293,6 @@
         "wires": [
             [
                 "41cc0c8ffc83553e",
-                "936691a3fed1656d",
                 "985575374b7203b9"
             ]
         ]
@@ -2111,106 +2109,6 @@
         "y": 1140,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "53f93ddbaa785228",
-        "type": "delay",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "minute",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1520,
-        "y": 900,
-        "wires": [
-            [
-                "91a05c7285d41477"
-            ]
-        ]
-    },
-    {
-        "id": "91a05c7285d41477",
-        "type": "trigger",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "",
-        "op1": "",
-        "op2": "0",
-        "op1type": "pay",
-        "op2type": "str",
-        "duration": "-10",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1710,
-        "y": 900,
-        "wires": [
-            [
-                "532f8cf32bd3497c"
-            ]
-        ]
-    },
-    {
-        "id": "936691a3fed1656d",
-        "type": "delay",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "minute",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1520,
-        "y": 960,
-        "wires": [
-            [
-                "23943d43eaccc13d"
-            ]
-        ]
-    },
-    {
-        "id": "23943d43eaccc13d",
-        "type": "trigger",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "",
-        "op1": "",
-        "op2": "0",
-        "op1type": "pay",
-        "op2type": "str",
-        "duration": "-10",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1710,
-        "y": 960,
-        "wires": [
-            [
-                "532f8cf32bd3497c"
-            ]
         ]
     },
     {
