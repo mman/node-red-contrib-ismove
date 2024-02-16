@@ -74,7 +74,7 @@
         "name": "Battery",
         "ui": "718f5fabaac10b79",
         "path": "/battery",
-        "icon": "battery-outline",
+        "icon": "battery-high",
         "layout": "grid",
         "theme": "65d08f24e020703e",
         "order": 3,
@@ -2135,7 +2135,7 @@
         "group": "",
         "page": "",
         "ui": "718f5fabaac10b79",
-        "name": "",
+        "name": "define my-row-span-3 CSS class",
         "order": 0,
         "width": 0,
         "height": 0,
@@ -2146,7 +2146,7 @@
         "resendOnRefresh": true,
         "templateScope": "site:style",
         "className": "",
-        "x": 120,
+        "x": 200,
         "y": 1380,
         "wires": [
             []
@@ -2700,6 +2700,30 @@
         "className": "",
         "x": 140,
         "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60cd73a57cb235a8",
+        "type": "ui-template",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "",
+        "page": "",
+        "ui": "718f5fabaac10b79",
+        "name": "disable chart.js tooltips",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n</template>\n\n<script>\n    export default {\n        mounted() {\n          Chart.defaults.plugins.tooltip.enabled = false;\n        },\n    }\n</script>\n\n<style>\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "widget:ui",
+        "className": "",
+        "x": 170,
+        "y": 1440,
         "wires": [
             []
         ]
