@@ -2687,7 +2687,7 @@
         "group": "066f91ffe1f81631",
         "page": "",
         "ui": "",
-        "name": "",
+        "name": "Venus Console",
         "order": 0,
         "width": "9",
         "height": "7",
@@ -2698,7 +2698,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 140,
+        "x": 160,
         "y": 2140,
         "wires": [
             []
