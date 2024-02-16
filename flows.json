@@ -2692,7 +2692,7 @@
         "width": "9",
         "height": "7",
         "head": "",
-        "format": "<template>\n    <div>\n        <iframe src=\"http://192.168.42.17\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>",
+        "format": "<template>\n    <div>\n        <iframe id=\"xxx\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>\n<script>\n    export default {\n        mounted() {\n            document.getElementById(\"xxx\").src = 'http://' + window.location.hostname + \":80/\"\n        }\n    }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
