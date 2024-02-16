@@ -50,7 +50,7 @@
         "icon": "home",
         "layout": "grid",
         "theme": "65d08f24e020703e",
-        "order": -1,
+        "order": 1,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -77,7 +77,7 @@
         "icon": "battery-outline",
         "layout": "grid",
         "theme": "65d08f24e020703e",
-        "order": -1,
+        "order": 3,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -104,7 +104,7 @@
         "icon": "white-balance-sunny",
         "layout": "grid",
         "theme": "65d08f24e020703e",
-        "order": -1,
+        "order": 2,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -157,7 +157,7 @@
         "icon": "gas-cylinder",
         "layout": "grid",
         "theme": "65d08f24e020703e",
-        "order": -1,
+        "order": 4,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -197,6 +197,91 @@
         "height": "1",
         "order": -1,
         "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "4505ba7932cfd313",
+        "type": "ui-page",
+        "name": "Diagnostics",
+        "ui": "718f5fabaac10b79",
+        "path": "/diagnostics",
+        "icon": "wrench",
+        "layout": "grid",
+        "theme": "e3486d2647da3ab8",
+        "order": 6,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "cd19b507456e0ba2",
+        "type": "ui-group",
+        "name": "Node RED",
+        "page": "4505ba7932cfd313",
+        "width": "3",
+        "height": "1",
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "e3486d2647da3ab8",
+        "type": "ui-theme",
+        "name": "Theme Gap",
+        "colors": {
+            "surface": "#ff6a00",
+            "primary": "#e32400",
+            "bgPage": "#ffffff",
+            "groupBg": "#ebebeb",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "pagePadding": "10px",
+            "groupGap": "10px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "4px"
+        }
+    },
+    {
+        "id": "307616ec0e946b1f",
+        "type": "ui-group",
+        "name": "Raspberry Pi",
+        "page": "4505ba7932cfd313",
+        "width": "3",
+        "height": "1",
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "066f91ffe1f81631",
+        "type": "ui-group",
+        "name": "Venus Console",
+        "page": "5fd04bc54e68d847",
+        "width": "9",
+        "height": "6",
+        "order": -1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "5fd04bc54e68d847",
+        "type": "ui-page",
+        "name": "Venus Console",
+        "ui": "718f5fabaac10b79",
+        "path": "/venus",
+        "icon": "alpha-v-circle-outline",
+        "layout": "grid",
+        "theme": "65d08f24e020703e",
+        "order": 5,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -2410,6 +2495,213 @@
                 "604cf414bf88090e",
                 "fcaa3a6729bb96de"
             ]
+        ]
+    },
+    {
+        "id": "667f394ce518b8ba",
+        "type": "inject",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 1820,
+        "wires": [
+            [
+                "69b39a40c52afad9"
+            ]
+        ]
+    },
+    {
+        "id": "69b39a40c52afad9",
+        "type": "exec",
+        "z": "f8aa3235cf2ec5d8",
+        "command": "sudo ifconfig wlan0",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 390,
+        "y": 1820,
+        "wires": [
+            [
+                "516387728954b9a2"
+            ],
+            [
+                "83aed9da24e9bf4c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "516387728954b9a2",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "stdout",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "83aed9da24e9bf4c",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "stderr",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "8af77dd47dc17a5b",
+        "type": "ui-button",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "cd19b507456e0ba2",
+        "name": "",
+        "label": "Restart Node RED",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 1900,
+        "wires": [
+            [
+                "66e3b99b036f7772"
+            ]
+        ]
+    },
+    {
+        "id": "66e3b99b036f7772",
+        "type": "exec",
+        "z": "f8aa3235cf2ec5d8",
+        "command": "sudo systemctl restart nodered",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 430,
+        "y": 1900,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8f04377f41bef0f0",
+        "type": "ui-button",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "307616ec0e946b1f",
+        "name": "",
+        "label": "Restart Raspberry PI",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 1980,
+        "wires": [
+            [
+                "2a73bfb3c94e7e05"
+            ]
+        ]
+    },
+    {
+        "id": "2a73bfb3c94e7e05",
+        "type": "exec",
+        "z": "f8aa3235cf2ec5d8",
+        "command": "sudo reboot",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 370,
+        "y": 1980,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d882b23481b4bc02",
+        "type": "ui-template",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "066f91ffe1f81631",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 0,
+        "width": "9",
+        "height": "7",
+        "head": "",
+        "format": "<template>\n    <div>\n        <iframe src=\"http://192.168.42.17\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 140,
+        "y": 2140,
+        "wires": [
+            []
         ]
     }
 ]
