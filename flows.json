@@ -21,7 +21,8 @@
             "ui-notification",
             "ui-control"
         ],
-        "showPathInSidebar": false
+        "showPathInSidebar": false,
+        "navigationStyle": "default"
     },
     {
         "id": "65d08f24e020703e",
@@ -77,7 +78,7 @@
         "icon": "battery-high",
         "layout": "grid",
         "theme": "65d08f24e020703e",
-        "order": 3,
+        "order": 4,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -104,7 +105,7 @@
         "icon": "white-balance-sunny",
         "layout": "grid",
         "theme": "65d08f24e020703e",
-        "order": 2,
+        "order": 3,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -128,7 +129,7 @@
         "name": "Battery",
         "page": "8dea16c6d0827c7a",
         "width": "3",
-        "height": "7",
+        "height": "3",
         "order": 2,
         "showTitle": true,
         "className": "my-row-span-3",
@@ -157,7 +158,7 @@
         "icon": "gas-cylinder",
         "layout": "grid",
         "theme": "65d08f24e020703e",
-        "order": 4,
+        "order": 5,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -210,7 +211,7 @@
         "icon": "wrench",
         "layout": "grid",
         "theme": "e3486d2647da3ab8",
-        "order": 6,
+        "order": 7,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -281,7 +282,99 @@
         "icon": "alpha-v-circle-outline",
         "layout": "grid",
         "theme": "65d08f24e020703e",
-        "order": 5,
+        "order": 6,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "950c7e84dc258ffb",
+        "type": "ui-page",
+        "name": "Overview 2",
+        "ui": "718f5fabaac10b79",
+        "path": "/overview2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "65d08f24e020703e",
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "184b464b9ef6e1e9",
+        "type": "ui-group",
+        "name": "Battery",
+        "page": "950c7e84dc258ffb",
+        "width": "3",
+        "height": "6",
+        "order": 2,
+        "showTitle": true,
+        "className": "my-row-span-3",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "24cb15692531f81d",
+        "type": "ui-group",
+        "name": "WiFi",
+        "page": "4505ba7932cfd313",
+        "width": "3",
+        "height": "1",
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "ff945a6df9c02dbf",
+        "type": "ui-group",
+        "name": "WiFi Status",
+        "page": "4505ba7932cfd313",
+        "width": "9",
+        "height": "1",
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "376dd725c0ba26d1",
+        "type": "ui-group",
+        "name": "Solar",
+        "page": "950c7e84dc258ffb",
+        "width": "3",
+        "height": "6",
+        "order": 1,
+        "showTitle": true,
+        "className": "my-row-span-3",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "7cee520cf475db2a",
+        "type": "ui-group",
+        "name": "LPG",
+        "page": "950c7e84dc258ffb",
+        "width": "3",
+        "height": "4",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "ba338f1031239462",
+        "type": "ui-group",
+        "name": "Coffee Machine",
+        "page": "950c7e84dc258ffb",
+        "width": "3",
+        "height": "1",
+        "order": 4,
+        "showTitle": true,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -350,7 +443,8 @@
         "y": 100,
         "wires": [
             [
-                "322d6acb8e1cc698"
+                "322d6acb8e1cc698",
+                "4fba035990245d4f"
             ]
         ]
     },
@@ -553,7 +647,7 @@
         "order": 2,
         "width": "0",
         "height": "0",
-        "name": "",
+        "name": "Battery time to go",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -562,7 +656,7 @@
         "fontSize": "20",
         "color": "#444444",
         "className": "",
-        "x": 1450,
+        "x": 1490,
         "y": 280,
         "wires": []
     },
@@ -571,7 +665,7 @@
         "type": "ui-chart",
         "z": "f8aa3235cf2ec5d8",
         "group": "b6dffcc7f93dd2cd",
-        "name": "",
+        "name": "Battery SoC History",
         "label": "",
         "order": 4,
         "chartType": "line",
@@ -604,7 +698,7 @@
         "width": "9",
         "height": "6",
         "className": "",
-        "x": 920,
+        "x": 940,
         "y": 580,
         "wires": [
             []
@@ -669,7 +763,7 @@
         "type": "ui-chart",
         "z": "f8aa3235cf2ec5d8",
         "group": "767b6a32326315fd",
-        "name": "",
+        "name": "PV Power History",
         "label": "",
         "order": 4,
         "chartType": "line",
@@ -702,7 +796,7 @@
         "width": "9",
         "height": "6",
         "className": "",
-        "x": 920,
+        "x": 930,
         "y": 700,
         "wires": [
             []
@@ -713,7 +807,7 @@
         "type": "ui-chart",
         "z": "f8aa3235cf2ec5d8",
         "group": "ab8d8a0602f7be5f",
-        "name": "",
+        "name": "Battery SoC",
         "label": "",
         "order": 1,
         "chartType": "bar",
@@ -746,7 +840,7 @@
         "width": "3",
         "height": "5",
         "className": "my-chart-vertical-large",
-        "x": 920,
+        "x": 810,
         "y": 820,
         "wires": [
             []
@@ -757,7 +851,7 @@
         "type": "ui-chart",
         "z": "f8aa3235cf2ec5d8",
         "group": "851a19cf340c4af4",
-        "name": "",
+        "name": "PV Power",
         "label": "",
         "order": 1,
         "chartType": "bar",
@@ -790,7 +884,7 @@
         "width": "3",
         "height": "5",
         "className": "my-chart-vertical-large",
-        "x": 920,
+        "x": 800,
         "y": 880,
         "wires": [
             []
@@ -806,7 +900,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "msg.payload / 500 * 100",
+                "to": "$round(msg.payload / 500 * 100)",
                 "tot": "jsonata"
             }
         ],
@@ -846,7 +940,8 @@
         "y": 880,
         "wires": [
             [
-                "2dbf19b7bcaa6a45"
+                "2dbf19b7bcaa6a45",
+                "cdf5150b5243959a"
             ]
         ]
     },
@@ -873,7 +968,8 @@
         "y": 820,
         "wires": [
             [
-                "c8c2033f38bb673a"
+                "c8c2033f38bb673a",
+                "792207cd5a0a23be"
             ]
         ]
     },
@@ -885,7 +981,7 @@
         "order": 2,
         "width": "0",
         "height": "0",
-        "name": "",
+        "name": "PV Yield",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -894,7 +990,7 @@
         "fontSize": "20",
         "color": "#444444",
         "className": "",
-        "x": 890,
+        "x": 800,
         "y": 940,
         "wires": []
     },
@@ -947,7 +1043,8 @@
         "y": 940,
         "wires": [
             [
-                "6b894dfa8fce8594"
+                "6b894dfa8fce8594",
+                "9922455809324f67"
             ]
         ]
     },
@@ -1132,7 +1229,7 @@
         "type": "ui-chart",
         "z": "f8aa3235cf2ec5d8",
         "group": "a50cae230ad147cc",
-        "name": "",
+        "name": "LPG History",
         "label": "",
         "order": 9007199254740991,
         "chartType": "line",
@@ -1165,7 +1262,7 @@
         "width": "6",
         "height": "6",
         "className": "",
-        "x": 1940,
+        "x": 1930,
         "y": 840,
         "wires": [
             []
@@ -1277,7 +1374,8 @@
         "wires": [
             [
                 "16279e1b0e5369bf",
-                "985575374b7203b9"
+                "985575374b7203b9",
+                "05814746cc5df126"
             ]
         ]
     },
@@ -1378,7 +1476,8 @@
         "wires": [
             [
                 "41cc0c8ffc83553e",
-                "985575374b7203b9"
+                "985575374b7203b9",
+                "05814746cc5df126"
             ]
         ]
     },
@@ -1590,6 +1689,13 @@
                 "pt": "msg",
                 "to": "ba",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(msg.payload = 0 ? -0.01 : msg.payload)",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -1843,7 +1949,8 @@
         "y": 280,
         "wires": [
             [
-                "8de0f31731dac937"
+                "8de0f31731dac937",
+                "a5087df7f27490b2"
             ]
         ]
     },
@@ -2035,7 +2142,7 @@
         "type": "ui-chart",
         "z": "f8aa3235cf2ec5d8",
         "group": "b5a02095750de218",
-        "name": "",
+        "name": "LPG",
         "label": "",
         "order": 1,
         "chartType": "bar",
@@ -2068,7 +2175,7 @@
         "width": "3",
         "height": "1",
         "className": "",
-        "x": 1700,
+        "x": 1670,
         "y": 1300,
         "wires": [
             []
@@ -2157,7 +2264,7 @@
         "type": "ui-chart",
         "z": "f8aa3235cf2ec5d8",
         "group": "3f46b93f98d0309b",
-        "name": "",
+        "name": "LPG Sensor Battery Level",
         "label": "",
         "order": 9007199254740991,
         "chartType": "bar",
@@ -2190,7 +2297,7 @@
         "width": "3",
         "height": "6",
         "className": "",
-        "x": 1700,
+        "x": 1730,
         "y": 1140,
         "wires": [
             []
@@ -2387,7 +2494,7 @@
         "order": 2,
         "width": "0",
         "height": "0",
-        "name": "",
+        "name": "LPG time to go",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -2396,7 +2503,7 @@
         "fontSize": "20",
         "color": "#444444",
         "className": "",
-        "x": 2670,
+        "x": 2700,
         "y": 780,
         "wires": []
     },
@@ -2594,7 +2701,6 @@
         "order": 2,
         "width": "3",
         "height": "1",
-        "passthru": false,
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2642,7 +2748,6 @@
         "order": 4,
         "width": "3",
         "height": "1",
-        "passthru": false,
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2692,14 +2797,14 @@
         "width": "9",
         "height": "7",
         "head": "",
-        "format": "<template>\n    <div>\n        <iframe id=\"xxx\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>\n<script>\n    export default {\n        mounted() {\n            document.getElementById(\"xxx\").src = 'http://' + window.location.hostname + \":80/\"\n        }\n    }\n</script>",
+        "format": "<template>\n    <div>\n        <iframe id=\"xxx\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>\n<script>\n    export default {\n        mounted() {\n            document.getElementById(\"xxx\").src = 'http://' + window.location.hostname + \":80/\"\n            document.getElementById(\"xxx\").focus()\n        }\n    }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 160,
-        "y": 2140,
+        "y": 2180,
         "wires": [
             []
         ]
@@ -2726,6 +2831,738 @@
         "y": 1440,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "792207cd5a0a23be",
+        "type": "ui-gauge",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "Battery SoC",
+        "group": "184b464b9ef6e1e9",
+        "order": 1,
+        "width": 3,
+        "height": "3",
+        "gtype": "gauge-34",
+        "gstyle": "rounded",
+        "title": "",
+        "units": "",
+        "icon": "battery-high",
+        "prefix": "",
+        "suffix": "%",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#0093ff"
+            },
+            {
+                "from": "25",
+                "color": "#0093ff"
+            },
+            {
+                "from": "50",
+                "color": "#0093ff"
+            },
+            {
+                "from": "75",
+                "color": "#0093ff"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": "20",
+        "sizeGap": "0",
+        "sizeKeyThickness": "0",
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1010,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "64fc114dd4fee87e",
+        "type": "ui-button",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "24cb15692531f81d",
+        "name": "",
+        "label": "OFF",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 2060,
+        "wires": [
+            [
+                "c0a2085271535236"
+            ]
+        ]
+    },
+    {
+        "id": "c0a2085271535236",
+        "type": "exec",
+        "z": "f8aa3235cf2ec5d8",
+        "command": "sudo nmcli connection down Atlantis",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 450,
+        "y": 2060,
+        "wires": [
+            [],
+            [],
+            [
+                "63a860212b3c59e3"
+            ]
+        ]
+    },
+    {
+        "id": "f559b5d16520412f",
+        "type": "ui-markdown",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "ff945a6df9c02dbf",
+        "name": "",
+        "order": 0,
+        "width": "9",
+        "height": "1",
+        "content": "```\n{{ msg?.payload }}\n```",
+        "className": "",
+        "x": 610,
+        "y": 2200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63a860212b3c59e3",
+        "type": "exec",
+        "z": "f8aa3235cf2ec5d8",
+        "command": "nmcli device show wlan0|grep -v '\\(DEVICE\\|TYPE\\|HWADDR\\|MTU\\|PATH\\|ROUTE\\|GATEWAY\\)'",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 630,
+        "y": 2200,
+        "wires": [
+            [
+                "f559b5d16520412f",
+                "8a5fddc4f507758c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "44bc90b9f59ca48d",
+        "type": "inject",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 2280,
+        "wires": [
+            [
+                "63a860212b3c59e3",
+                "8b577b52f92292fb"
+            ]
+        ]
+    },
+    {
+        "id": "8a5fddc4f507758c",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "a4340be89d4fc662",
+        "type": "ui-button",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "24cb15692531f81d",
+        "name": "",
+        "label": "ON",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 2100,
+        "wires": [
+            [
+                "b6fbbc7f910721ed"
+            ]
+        ]
+    },
+    {
+        "id": "b6fbbc7f910721ed",
+        "type": "exec",
+        "z": "f8aa3235cf2ec5d8",
+        "command": "sudo nmcli connection up Atlantis",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 440,
+        "y": 2120,
+        "wires": [
+            [],
+            [],
+            [
+                "63a860212b3c59e3"
+            ]
+        ]
+    },
+    {
+        "id": "cdf5150b5243959a",
+        "type": "ui-gauge",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "PV Power",
+        "group": "376dd725c0ba26d1",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-34",
+        "gstyle": "rounded",
+        "title": "",
+        "units": "",
+        "icon": "white-balance-sunny",
+        "prefix": "",
+        "suffix": "%",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#fe9300"
+            },
+            {
+                "from": "25",
+                "color": "#fe9300"
+            },
+            {
+                "from": "50",
+                "color": "#fe9300"
+            },
+            {
+                "from": "75",
+                "color": "#fe9300"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": "20",
+        "sizeGap": "0",
+        "sizeKeyThickness": "0",
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1000,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "05814746cc5df126",
+        "type": "join",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1450,
+        "y": 1400,
+        "wires": [
+            [
+                "1f9bcb7614eac3b5",
+                "3b247c9225ee8c19"
+            ]
+        ]
+    },
+    {
+        "id": "1f9bcb7614eac3b5",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(($lookup(msg.payload, 'Tank 1') + $lookup(msg.payload, 'Tank 2')) / 2.0)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1740,
+        "y": 1400,
+        "wires": [
+            [
+                "0c929f0ddf548d2d",
+                "cecae7b9de626341"
+            ]
+        ]
+    },
+    {
+        "id": "3b247c9225ee8c19",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1660,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "0c929f0ddf548d2d",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1870,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "cecae7b9de626341",
+        "type": "ui-gauge",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "LPG",
+        "group": "7cee520cf475db2a",
+        "order": 0,
+        "width": 3,
+        "height": "3",
+        "gtype": "gauge-34",
+        "gstyle": "rounded",
+        "title": "",
+        "units": "",
+        "icon": "gas-cylinder",
+        "prefix": "",
+        "suffix": "%",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ff2f92"
+            },
+            {
+                "from": "25",
+                "color": "#ff2f92"
+            },
+            {
+                "from": "50",
+                "color": "#ff2f92"
+            },
+            {
+                "from": "75",
+                "color": "#ff2f92"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": "20",
+        "sizeGap": "0",
+        "sizeKeyThickness": "0",
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1970,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "4fba035990245d4f",
+        "type": "ui-radio-group",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "ba338f1031239462",
+        "name": "",
+        "label": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "columns": "2",
+        "passthru": false,
+        "options": [
+            {
+                "label": "OFF",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "ON",
+                "value": 3,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "ac748dfed8bde63e"
+            ]
+        ]
+    },
+    {
+        "id": "a5087df7f27490b2",
+        "type": "ui-text",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "184b464b9ef6e1e9",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "Battery time to go",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "20",
+        "color": "#444444",
+        "className": "",
+        "x": 1490,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9922455809324f67",
+        "type": "ui-text",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "376dd725c0ba26d1",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "PV Yield",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "20",
+        "color": "#444444",
+        "className": "",
+        "x": 800,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "2c0e96d8cf637ca3",
+        "type": "victron-input-system",
+        "z": "f8aa3235cf2ec5d8",
+        "service": "com.victronenergy.system/0",
+        "path": "/Dc/Battery/TimeToGo",
+        "serviceObj": {
+            "service": "com.victronenergy.system/0",
+            "name": "Venus system"
+        },
+        "pathObj": {
+            "path": "/Dc/Battery/TimeToGo",
+            "type": "float",
+            "name": "Battery Time to Go (s)"
+        },
+        "name": "",
+        "onlyChanges": false,
+        "roundValues": "no",
+        "x": 200,
+        "y": 2460,
+        "wires": [
+            [
+                "cec764c349531eb2"
+            ]
+        ]
+    },
+    {
+        "id": "26f8fb27f3282e9f",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "cec764c349531eb2",
+        "type": "trigger",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 440,
+        "y": 2460,
+        "wires": [
+            [
+                "26f8fb27f3282e9f",
+                "84b90e5f9c344fcf"
+            ]
+        ]
+    },
+    {
+        "id": "319182fd132f707e",
+        "type": "ui-template",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "",
+        "page": "",
+        "ui": "718f5fabaac10b79",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n            }\n        }\n    }\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "widget:ui",
+        "className": "",
+        "x": 1380,
+        "y": 2440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b577b52f92292fb",
+        "type": "exec",
+        "z": "f8aa3235cf2ec5d8",
+        "command": "nmcli device show wlan0|grep 'GENERAL.CONNECTION'|cut -d : -f 2|xargs echo -n",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 590,
+        "y": 2360,
+        "wires": [
+            [
+                "57da5168dfc70ada"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0d7ebe0bdd66bbb1",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "612a898d16eb12f2",
+        "type": "inject",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 2360,
+        "wires": [
+            [
+                "8b577b52f92292fb"
+            ]
+        ]
+    },
+    {
+        "id": "84b90e5f9c344fcf",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "is_alive",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "is_alive",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 2460,
+        "wires": [
+            [
+                "f0ba03a41bd4a6cf"
+            ]
+        ]
+    },
+    {
+        "id": "57da5168dfc70ada",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "wifi_network_name",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "wifi_network_name",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 2420,
+        "wires": [
+            [
+                "f0ba03a41bd4a6cf"
+            ]
+        ]
+    },
+    {
+        "id": "f0ba03a41bd4a6cf",
+        "type": "join",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "1",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1210,
+        "y": 2440,
+        "wires": [
+            [
+                "319182fd132f707e",
+                "0d7ebe0bdd66bbb1"
+            ]
         ]
     }
 ]
