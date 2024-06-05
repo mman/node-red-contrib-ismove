@@ -90,7 +90,7 @@
         "page": "949188085ecf898f",
         "width": "9",
         "height": "6",
-        "order": -1,
+        "order": 1,
         "showTitle": true,
         "className": "my-row-span-3",
         "visible": "true",
@@ -170,7 +170,7 @@
         "page": "4a46055ef71bd0a1",
         "width": "6",
         "height": "1",
-        "order": -1,
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -196,7 +196,7 @@
         "page": "4a46055ef71bd0a1",
         "width": "3",
         "height": "1",
-        "order": -1,
+        "order": 1,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -211,7 +211,7 @@
         "icon": "wrench",
         "layout": "grid",
         "theme": "e3486d2647da3ab8",
-        "order": 7,
+        "order": 9,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -223,7 +223,7 @@
         "page": "4505ba7932cfd313",
         "width": "3",
         "height": "1",
-        "order": -1,
+        "order": 4,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -254,7 +254,7 @@
         "page": "4505ba7932cfd313",
         "width": "3",
         "height": "1",
-        "order": -1,
+        "order": 3,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -263,26 +263,12 @@
     {
         "id": "066f91ffe1f81631",
         "type": "ui-group",
-        "name": "Venus Console",
-        "page": "5fd04bc54e68d847",
+        "name": "Venus GUI v2",
+        "page": "39467db415bd26ea",
         "width": "9",
         "height": "6",
-        "order": -1,
+        "order": 1,
         "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "5fd04bc54e68d847",
-        "type": "ui-page",
-        "name": "Venus Console",
-        "ui": "718f5fabaac10b79",
-        "path": "/venus",
-        "icon": "alpha-v-circle-outline",
-        "layout": "grid",
-        "theme": "65d08f24e020703e",
-        "order": 6,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -298,8 +284,8 @@
         "theme": "65d08f24e020703e",
         "order": 2,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": "false",
+        "disabled": "true"
     },
     {
         "id": "184b464b9ef6e1e9",
@@ -321,7 +307,7 @@
         "page": "4505ba7932cfd313",
         "width": "3",
         "height": "1",
-        "order": -1,
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -334,7 +320,7 @@
         "page": "4505ba7932cfd313",
         "width": "9",
         "height": "1",
-        "order": -1,
+        "order": 1,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -380,13 +366,99 @@
         "disabled": "false"
     },
     {
+        "id": "39467db415bd26ea",
+        "type": "ui-page",
+        "name": "Venus GUI v2",
+        "ui": "718f5fabaac10b79",
+        "path": "/venus2",
+        "icon": "alpha-g-circle-outline",
+        "layout": "grid",
+        "theme": "65d08f24e020703e",
+        "order": 7,
+        "className": "",
+        "visible": "false",
+        "disabled": "false"
+    },
+    {
+        "id": "ce04dc6721b53338",
+        "type": "ui-group",
+        "name": "Venus Console",
+        "page": "fdacafbad7bf9046",
+        "width": "9",
+        "height": "6",
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "9572caa4c78b4484",
+        "type": "ui-group",
+        "name": "Venus MFD",
+        "page": "9286426e07df8a5f",
+        "width": "9",
+        "height": "6",
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "9286426e07df8a5f",
+        "type": "ui-page",
+        "name": "Venus MFD",
+        "ui": "718f5fabaac10b79",
+        "path": "/venusmfd",
+        "icon": "alpha-m-circle-outline",
+        "layout": "grid",
+        "theme": "fb361d8cf79263ff",
+        "order": 8,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "fdacafbad7bf9046",
+        "type": "ui-page",
+        "name": "Venus Console",
+        "ui": "718f5fabaac10b79",
+        "path": "/venus",
+        "icon": "alpha-v-circle-outline",
+        "layout": "grid",
+        "theme": "fb361d8cf79263ff",
+        "order": 6,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "fb361d8cf79263ff",
+        "type": "ui-theme",
+        "name": "Theme No Padding",
+        "colors": {
+            "surface": "#ff6a00",
+            "primary": "#ff6a00",
+            "bgPage": "#ffffff",
+            "groupBg": "#ebebeb",
+            "groupOutline": "#d6d6d6"
+        },
+        "sizes": {
+            "pagePadding": "0px",
+            "groupGap": "0px",
+            "groupBorderRadius": "0px",
+            "widgetGap": "0px"
+        }
+    },
+    {
         "id": "322d6acb8e1cc698",
         "type": "ui-radio-group",
         "z": "f8aa3235cf2ec5d8",
         "group": "ac3765750752ad30",
         "name": "",
         "label": "",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "columns": "2",
@@ -537,7 +609,7 @@
         "group": "ac3765750752ad30",
         "name": "",
         "label": "",
-        "order": 4,
+        "order": 2,
         "width": 0,
         "height": 0,
         "columns": 1,
@@ -667,7 +739,7 @@
         "group": "b6dffcc7f93dd2cd",
         "name": "Battery SoC History",
         "label": "",
-        "order": 4,
+        "order": 1,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
@@ -765,16 +837,18 @@
         "group": "767b6a32326315fd",
         "name": "PV Power History",
         "label": "",
-        "order": 4,
+        "order": 1,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
+        "xAxisLabel": "",
         "xAxisProperty": "",
         "xAxisPropertyType": "msg",
         "xAxisType": "time",
+        "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "-2",
-        "ymax": "500",
+        "ymax": "700",
         "action": "append",
         "pointShape": "line",
         "pointRadius": "0",
@@ -900,7 +974,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "$round(msg.payload / 500 * 100)",
+                "to": "$round(msg.payload / 750 * 100)",
                 "tot": "jsonata"
             }
         ],
@@ -1231,7 +1305,7 @@
         "group": "a50cae230ad147cc",
         "name": "LPG History",
         "label": "",
-        "order": 9007199254740991,
+        "order": 1,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
@@ -2148,9 +2222,11 @@
         "chartType": "bar",
         "category": "topic",
         "categoryType": "msg",
+        "xAxisLabel": "",
         "xAxisProperty": "",
         "xAxisPropertyType": "msg",
         "xAxisType": "category",
+        "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "0",
         "ymax": "100",
@@ -2175,7 +2251,7 @@
         "width": "3",
         "height": "1",
         "className": "",
-        "x": 1670,
+        "x": 2010,
         "y": 1300,
         "wires": [
             []
@@ -2242,7 +2318,7 @@
         "group": "",
         "page": "",
         "ui": "718f5fabaac10b79",
-        "name": "define my-row-span-3 CSS class",
+        "name": "my CSS classes",
         "order": 0,
         "width": 0,
         "height": 0,
@@ -2253,7 +2329,7 @@
         "resendOnRefresh": true,
         "templateScope": "site:style",
         "className": "",
-        "x": 200,
+        "x": 140,
         "y": 1380,
         "wires": [
             []
@@ -2266,7 +2342,7 @@
         "group": "3f46b93f98d0309b",
         "name": "LPG Sensor Battery Level",
         "label": "",
-        "order": 9007199254740991,
+        "order": 1,
         "chartType": "bar",
         "category": "topic",
         "categoryType": "msg",
@@ -2698,7 +2774,7 @@
         "group": "cd19b507456e0ba2",
         "name": "",
         "label": "Restart Node RED",
-        "order": 2,
+        "order": 1,
         "width": "3",
         "height": "1",
         "tooltip": "",
@@ -2745,7 +2821,7 @@
         "group": "307616ec0e946b1f",
         "name": "",
         "label": "Restart Raspberry PI",
-        "order": 4,
+        "order": 1,
         "width": "3",
         "height": "1",
         "tooltip": "",
@@ -2789,22 +2865,22 @@
         "id": "d882b23481b4bc02",
         "type": "ui-template",
         "z": "f8aa3235cf2ec5d8",
-        "group": "066f91ffe1f81631",
+        "group": "ce04dc6721b53338",
         "page": "",
         "ui": "",
         "name": "Venus Console",
-        "order": 0,
+        "order": 1,
         "width": "9",
         "height": "7",
         "head": "",
-        "format": "<template>\n    <div>\n        <iframe id=\"xxx\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>\n<script>\n    export default {\n        mounted() {\n            document.getElementById(\"xxx\").src = 'http://' + window.location.hostname + \":80/\"\n            document.getElementById(\"xxx\").focus()\n        }\n    }\n</script>",
+        "format": "<template>\n    <div style=\"padding:0;margin:0;\">\n        <iframe id=\"xxx\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>\n<script>\n    export default {\n        mounted() {\n            document.getElementById(\"xxx\").src = 'http://' + window.location.hostname + \":80/\"\n            document.getElementById(\"xxx\").focus()\n        }\n    }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 160,
-        "y": 2180,
+        "y": 2660,
         "wires": [
             []
         ]
@@ -2934,13 +3010,13 @@
         "z": "f8aa3235cf2ec5d8",
         "group": "ff945a6df9c02dbf",
         "name": "",
-        "order": 0,
+        "order": 1,
         "width": "9",
         "height": "1",
         "content": "```\n{{ msg?.payload }}\n```",
         "className": "",
-        "x": 610,
-        "y": 2200,
+        "x": 1110,
+        "y": 2220,
         "wires": [
             []
         ]
@@ -2949,7 +3025,7 @@
         "id": "63a860212b3c59e3",
         "type": "exec",
         "z": "f8aa3235cf2ec5d8",
-        "command": "nmcli device show wlan0|grep -v '\\(DEVICE\\|TYPE\\|HWADDR\\|MTU\\|PATH\\|ROUTE\\|GATEWAY\\)'",
+        "command": "nmcli device show wlan1|grep -v '\\(DEVICE\\|TYPE\\|HWADDR\\|MTU\\|PATH\\|ROUTE\\|GATEWAY\\)'",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -2958,11 +3034,10 @@
         "oldrc": false,
         "name": "",
         "x": 630,
-        "y": 2200,
+        "y": 2220,
         "wires": [
             [
-                "f559b5d16520412f",
-                "8a5fddc4f507758c"
+                "f559b5d16520412f"
             ],
             [],
             []
@@ -2999,22 +3074,6 @@
         ]
     },
     {
-        "id": "8a5fddc4f507758c",
-        "type": "debug",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "debug 12",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 2240,
-        "wires": []
-    },
-    {
         "id": "a4340be89d4fc662",
         "type": "ui-button",
         "z": "f8aa3235cf2ec5d8",
@@ -3034,7 +3093,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 130,
-        "y": 2100,
+        "y": 2140,
         "wires": [
             [
                 "b6fbbc7f910721ed"
@@ -3054,7 +3113,7 @@
         "oldrc": false,
         "name": "",
         "x": 440,
-        "y": 2120,
+        "y": 2140,
         "wires": [
             [],
             [],
@@ -3204,7 +3263,7 @@
         "z": "f8aa3235cf2ec5d8",
         "name": "LPG",
         "group": "7cee520cf475db2a",
-        "order": 0,
+        "order": 1,
         "width": 3,
         "height": "3",
         "gtype": "gauge-34",
@@ -3251,7 +3310,7 @@
         "group": "ba338f1031239462",
         "name": "",
         "label": "",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "columns": "2",
@@ -3327,42 +3386,33 @@
         "type": "victron-input-system",
         "z": "f8aa3235cf2ec5d8",
         "service": "com.victronenergy.system/0",
-        "path": "/Dc/Battery/TimeToGo",
+        "path": "/Dc/Battery/State",
         "serviceObj": {
             "service": "com.victronenergy.system/0",
             "name": "Venus system"
         },
         "pathObj": {
-            "path": "/Dc/Battery/TimeToGo",
-            "type": "float",
-            "name": "Battery Time to Go (s)"
+            "path": "/Dc/Battery/State",
+            "type": "enum",
+            "name": "Battery state",
+            "enum": {
+                "0": "idle",
+                "1": "charging",
+                "2": "discharging"
+            }
         },
+        "initial": "",
         "name": "",
         "onlyChanges": false,
         "roundValues": "no",
         "x": 200,
-        "y": 2460,
+        "y": 2500,
         "wires": [
             [
-                "cec764c349531eb2"
+                "cec764c349531eb2",
+                "f36517bb06513475"
             ]
         ]
-    },
-    {
-        "id": "26f8fb27f3282e9f",
-        "type": "debug",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "debug 15",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 2520,
-        "wires": []
     },
     {
         "id": "cec764c349531eb2",
@@ -3373,7 +3423,7 @@
         "op2": "false",
         "op1type": "bool",
         "op2type": "bool",
-        "duration": "5",
+        "duration": "10",
         "extend": true,
         "overrideDelay": false,
         "units": "s",
@@ -3381,11 +3431,10 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 440,
-        "y": 2460,
+        "x": 470,
+        "y": 2520,
         "wires": [
             [
-                "26f8fb27f3282e9f",
                 "84b90e5f9c344fcf"
             ]
         ]
@@ -3402,13 +3451,13 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n            }\n        }\n    }\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0 ?? false\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n            }\n        }\n    }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "widget:ui",
         "className": "",
-        "x": 1380,
+        "x": 1480,
         "y": 2440,
         "wires": [
             []
@@ -3418,7 +3467,7 @@
         "id": "8b577b52f92292fb",
         "type": "exec",
         "z": "f8aa3235cf2ec5d8",
-        "command": "nmcli device show wlan0|grep 'GENERAL.CONNECTION'|cut -d : -f 2|xargs echo -n",
+        "command": "nmcli device show wlan1|grep 'GENERAL.CONNECTION'|cut -d : -f 2|xargs echo -n|sed -e 's/-//g'",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -3426,7 +3475,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 590,
+        "x": 640,
         "y": 2360,
         "wires": [
             [
@@ -3449,7 +3498,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1380,
+        "x": 1480,
         "y": 2500,
         "wires": []
     },
@@ -3501,8 +3550,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1060,
-        "y": 2460,
+        "x": 1140,
+        "y": 2480,
         "wires": [
             [
                 "f0ba03a41bd4a6cf"
@@ -3528,8 +3577,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1030,
-        "y": 2420,
+        "x": 1110,
+        "y": 2400,
         "wires": [
             [
                 "f0ba03a41bd4a6cf"
@@ -3556,12 +3605,87 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 1210,
+        "x": 1310,
         "y": 2440,
         "wires": [
             [
                 "319182fd132f707e",
                 "0d7ebe0bdd66bbb1"
+            ]
+        ]
+    },
+    {
+        "id": "970ecf49dc2ea1ee",
+        "type": "ui-template",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "066f91ffe1f81631",
+        "page": "",
+        "ui": "",
+        "name": "Venus GUI v2",
+        "order": 1,
+        "width": "9",
+        "height": "7",
+        "head": "",
+        "format": "<template>\n    <div style=\"padding:0;margin:0;\">\n       <iframe id=\"xxx\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>\n<script>\n    export default {\n        mounted() {\n            document.getElementById(\"xxx\").src = 'http://' + window.location.hostname + \":80/gui-v2\"\n            document.getElementById(\"xxx\").focus()\n        }\n    }\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 160,
+        "y": 2720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e4a9b7f6973a509",
+        "type": "ui-template",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "9572caa4c78b4484",
+        "page": "",
+        "ui": "",
+        "name": "Venus HTML5 App",
+        "order": 1,
+        "width": "9",
+        "height": "7",
+        "head": "",
+        "format": "<template>\n    <div style=\"padding:0;margin:0;\">\n        <iframe id=\"xxx\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>\n<script>\n    export default {\n        mounted() {\n            document.getElementById(\"xxx\").src = 'http://' + window.location.hostname + \":80/app\"\n            document.getElementById(\"xxx\").focus()\n        }\n    }\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 170,
+        "y": 2780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f36517bb06513475",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 2460,
+        "wires": [
+            [
+                "84b90e5f9c344fcf"
             ]
         ]
     }
