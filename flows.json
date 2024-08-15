@@ -887,13 +887,18 @@
         "chartType": "bar",
         "category": "topic",
         "categoryType": "msg",
-        "xAxisProperty": "",
+        "xAxisLabel": "",
+        "xAxisProperty": "topic",
         "xAxisPropertyType": "msg",
         "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "0",
         "ymax": "100",
         "action": "replace",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
         "showLegend": false,
@@ -911,6 +916,14 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": "3",
         "height": "5",
         "className": "my-chart-vertical-large",
@@ -931,13 +944,18 @@
         "chartType": "bar",
         "category": "topic",
         "categoryType": "msg",
-        "xAxisProperty": "",
+        "xAxisLabel": "",
+        "xAxisProperty": "topic",
         "xAxisPropertyType": "msg",
         "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "0",
         "ymax": "100",
         "action": "replace",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
         "showLegend": false,
@@ -955,6 +973,14 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": "3",
         "height": "5",
         "className": "my-chart-vertical-large",
@@ -1253,7 +1279,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 740,
@@ -1290,7 +1317,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload.id",
+        "complete": "payload.address",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
@@ -1372,13 +1399,11 @@
         "wires": [
             [
                 "779d0d7c615dc92b",
-                "0dda6c321dade9ce",
-                "f33d6cab84b83819"
+                "0dda6c321dade9ce"
             ],
             [
                 "ce71a173805b6bce",
-                "240a9780e33c1538",
-                "5e710f6a3ccc913f"
+                "240a9780e33c1538"
             ],
             []
         ]
@@ -1427,7 +1452,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "Tank 1",
+                "to": "Tank 1 [%]",
                 "tot": "str"
             },
             {
@@ -1447,42 +1472,10 @@
         "y": 1100,
         "wires": [
             [
-                "16279e1b0e5369bf",
                 "985575374b7203b9",
-                "05814746cc5df126"
+                "05814746cc5df126",
+                "f231abf29a762452"
             ]
-        ]
-    },
-    {
-        "id": "f33d6cab84b83819",
-        "type": "change",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "Tank 1 Level Alt",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Tank 1 Alt",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.mman_tl2",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 940,
-        "y": 1140,
-        "wires": [
-            []
         ]
     },
     {
@@ -1529,7 +1522,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "Tank 2",
+                "to": "Tank 2 [%]",
                 "tot": "str"
             },
             {
@@ -1549,42 +1542,10 @@
         "y": 1260,
         "wires": [
             [
-                "41cc0c8ffc83553e",
                 "985575374b7203b9",
-                "05814746cc5df126"
+                "05814746cc5df126",
+                "f231abf29a762452"
             ]
-        ]
-    },
-    {
-        "id": "5e710f6a3ccc913f",
-        "type": "change",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "Tank 2 Level Alt",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Tank 2 Alt",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.mman_tl2",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 940,
-        "y": 1300,
-        "wires": [
-            []
         ]
     },
     {
@@ -2223,14 +2184,17 @@
         "category": "topic",
         "categoryType": "msg",
         "xAxisLabel": "",
-        "xAxisProperty": "",
+        "xAxisProperty": "topic",
         "xAxisPropertyType": "msg",
         "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
         "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "0",
         "ymax": "100",
         "action": "append",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": "0",
         "showLegend": false,
@@ -2248,67 +2212,21 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": "3",
         "height": "1",
         "className": "",
-        "x": 2010,
+        "x": 1970,
         "y": 1300,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "16279e1b0e5369bf",
-        "type": "change",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Tank 1 [%]",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1480,
-        "y": 1280,
-        "wires": [
-            [
-                "f231abf29a762452"
-            ]
-        ]
-    },
-    {
-        "id": "41cc0c8ffc83553e",
-        "type": "change",
-        "z": "f8aa3235cf2ec5d8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Tank 2 [%]",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1480,
-        "y": 1320,
-        "wires": [
-            [
-                "f231abf29a762452"
-            ]
         ]
     },
     {
@@ -2346,13 +2264,18 @@
         "chartType": "bar",
         "category": "topic",
         "categoryType": "msg",
-        "xAxisProperty": "",
+        "xAxisLabel": "",
+        "xAxisProperty": "topic",
         "xAxisPropertyType": "msg",
         "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "0",
         "ymax": "100",
         "action": "append",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
         "showLegend": false,
@@ -2370,6 +2293,14 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": "3",
         "height": "6",
         "className": "",
@@ -3446,18 +3377,18 @@
         "group": "",
         "page": "",
         "ui": "718f5fabaac10b79",
-        "name": "",
+        "name": "Top Right Status",
         "order": 0,
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0 ?? false\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n            }\n        }\n    }\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n        <span style=\"font-size: 1.25rem\">&nbsp;{{cpu_temperature}} ºC&nbsp;&nbsp;</span>\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n                cpu_temperature: \"0.0\"\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0 ?? false\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n                this.cpu_temperature = this.msg.payload.cpu_temperature ?? \"0.0\"\n            }\n        }\n    }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "widget:ui",
         "className": "",
-        "x": 1480,
+        "x": 1510,
         "y": 2440,
         "wires": [
             []
@@ -3523,7 +3454,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
+        "x": 160,
         "y": 2360,
         "wires": [
             [
@@ -3686,6 +3617,102 @@
         "wires": [
             [
                 "84b90e5f9c344fcf"
+            ]
+        ]
+    },
+    {
+        "id": "6d72c96e46b26bbc",
+        "type": "exec",
+        "z": "f8aa3235cf2ec5d8",
+        "command": "vcgencmd measure_temp | cut -d = -f 2 | cut -d \\' -f 1 | xargs echo -n",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 570,
+        "y": 2880,
+        "wires": [
+            [
+                "e072109cfb873318",
+                "08d71e4cfde08fe9"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3e24d1340e8327c9",
+        "type": "inject",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 2880,
+        "wires": [
+            [
+                "6d72c96e46b26bbc"
+            ]
+        ]
+    },
+    {
+        "id": "e072109cfb873318",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "temperature",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 2860,
+        "wires": []
+    },
+    {
+        "id": "08d71e4cfde08fe9",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "cpu_temperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 2560,
+        "wires": [
+            [
+                "f0ba03a41bd4a6cf"
             ]
         ]
     }
