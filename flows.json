@@ -3382,7 +3382,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n        <span style=\"font-size: 1.25rem\">&nbsp;{{cpu_temperature}} ºC&nbsp;&nbsp;</span>\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n                cpu_temperature: \"0.0\"\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0 ?? false\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n                this.cpu_temperature = this.msg.payload.cpu_temperature ?? \"0.0\"\n            }\n        }\n    }\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon icon=\"mdi-battery-high\" color=\"#ffffff\"></v-icon>\n        <span style=\"font-size: 1.25rem\">{{battery_temperature}} ºC</span>\n        &nbsp;&nbsp;\n        <v-icon icon=\"mdi-raspberry-pi\" color=\"#ffffff\"></v-icon>\n        <span style=\"font-size: 1.25rem\">{{cpu_temperature}} ºC</span>        \n        &nbsp;&nbsp;\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n        &nbsp;&nbsp;\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n                cpu_temperature: \"0.0\",\n                battery_temperature: \"0.0\"\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0 ?? false\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n                this.cpu_temperature = this.msg.payload.cpu_temperature ?? \"0.0\"\n                this.battery_temperature = this.msg.payload.battery_temperature ?? \"0.0\"\n            }\n        }\n    }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -3676,7 +3676,7 @@
         "id": "e072109cfb873318",
         "type": "debug",
         "z": "f8aa3235cf2ec5d8",
-        "name": "temperature",
+        "name": "cpu_temperature",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -3685,7 +3685,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1070,
+        "x": 1090,
         "y": 2860,
         "wires": []
     },
@@ -3693,7 +3693,7 @@
         "id": "08d71e4cfde08fe9",
         "type": "change",
         "z": "f8aa3235cf2ec5d8",
-        "name": "",
+        "name": "cpu_temperature",
         "rules": [
             {
                 "t": "set",
@@ -3708,11 +3708,82 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1120,
+        "x": 1130,
         "y": 2560,
         "wires": [
             [
                 "f0ba03a41bd4a6cf"
+            ]
+        ]
+    },
+    {
+        "id": "93a8c4d27f4844b1",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "battery_temperature",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 3000,
+        "wires": []
+    },
+    {
+        "id": "0cddfe52496e0802",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "battery_temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "battery_temperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 2620,
+        "wires": [
+            [
+                "f0ba03a41bd4a6cf"
+            ]
+        ]
+    },
+    {
+        "id": "128facc634b30ebb",
+        "type": "victron-input-vebus",
+        "z": "f8aa3235cf2ec5d8",
+        "service": "com.victronenergy.vebus/276",
+        "path": "/Dc/0/Temperature",
+        "serviceObj": {
+            "service": "com.victronenergy.vebus/276",
+            "name": "0. Multiplus"
+        },
+        "pathObj": {
+            "path": "/Dc/0/Temperature",
+            "type": "float",
+            "name": "Battery temperature (°C)"
+        },
+        "name": "",
+        "onlyChanges": false,
+        "roundValues": "1",
+        "x": 210,
+        "y": 3000,
+        "wires": [
+            [
+                "93a8c4d27f4844b1",
+                "0cddfe52496e0802"
             ]
         ]
     }
