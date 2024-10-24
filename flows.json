@@ -373,16 +373,38 @@
         "path": "/venus2",
         "icon": "alpha-g-circle-outline",
         "layout": "grid",
-        "theme": "65d08f24e020703e",
+        "theme": "fb361d8cf79263ff",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
         "order": 7,
         "className": "",
-        "visible": "false",
+        "visible": "true",
         "disabled": "false"
     },
     {
         "id": "ce04dc6721b53338",
         "type": "ui-group",
-        "name": "Venus Console",
+        "name": "Venus GUI v1",
         "page": "fdacafbad7bf9046",
         "width": "9",
         "height": "6",
@@ -390,7 +412,8 @@
         "showTitle": false,
         "className": "",
         "visible": "true",
-        "disabled": "false"
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "9572caa4c78b4484",
@@ -414,24 +437,68 @@
         "icon": "alpha-m-circle-outline",
         "layout": "grid",
         "theme": "fb361d8cf79263ff",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
         "order": 8,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": true,
+        "disabled": false
     },
     {
         "id": "fdacafbad7bf9046",
         "type": "ui-page",
-        "name": "Venus Console",
+        "name": "Venus GUI v1",
         "ui": "718f5fabaac10b79",
         "path": "/venus",
         "icon": "alpha-v-circle-outline",
         "layout": "grid",
         "theme": "fb361d8cf79263ff",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
         "order": 6,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": true,
+        "disabled": false
     },
     {
         "id": "fb361d8cf79263ff",
@@ -1337,7 +1404,7 @@
         "category": "topic",
         "categoryType": "msg",
         "xAxisProperty": "",
-        "xAxisPropertyType": "msg",
+        "xAxisPropertyType": "property",
         "xAxisType": "time",
         "yAxisProperty": "",
         "ymin": "-2",
@@ -2194,7 +2261,7 @@
         "ymin": "0",
         "ymax": "100",
         "action": "append",
-        "stackSeries": false,
+        "stackSeries": true,
         "pointShape": "circle",
         "pointRadius": "0",
         "showLegend": false,
@@ -2275,7 +2342,7 @@
         "ymin": "0",
         "ymax": "100",
         "action": "append",
-        "stackSeries": false,
+        "stackSeries": true,
         "pointShape": "circle",
         "pointRadius": 4,
         "showLegend": false,
@@ -2355,7 +2422,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "$lookup(payload, \"Tank 1\") + $lookup(payload, \"Tank 2\") + 2",
+                "to": "($lookup(payload, \"Tank 1 [%]\")) + ($lookup(payload, \"Tank 2 [%]\")) + 2",
                 "tot": "jsonata"
             }
         ],
@@ -2799,12 +2866,12 @@
         "group": "ce04dc6721b53338",
         "page": "",
         "ui": "",
-        "name": "Venus Console",
+        "name": "Venus GUI v1",
         "order": 1,
         "width": "9",
         "height": "8",
         "head": "",
-        "format": "<template>\n    <div style=\"padding:0;margin:0;\">\n        <iframe id=\"xxx\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>\n<script>\n    export default {\n        mounted() {\n            document.getElementById(\"xxx\").src = 'http://' + window.location.hostname + \":80/\"\n            document.getElementById(\"xxx\").focus()\n        }\n    }\n</script>",
+        "format": "<template>\n    <div style=\"padding:0;margin:0;\">\n        <iframe id=\"xxx\" width=\"100%\" height=\"100%\"></iframe>\n    </div>\n</template>\n<script>\n    export default {\n        mounted() {\n            document.getElementById(\"xxx\").src = 'http://' + window.location.hostname + \":80\"\n            document.getElementById(\"xxx\").focus()\n        }\n    }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -2956,7 +3023,7 @@
         "id": "63a860212b3c59e3",
         "type": "exec",
         "z": "f8aa3235cf2ec5d8",
-        "command": "nmcli device show wlan1|grep -v '\\(DEVICE\\|TYPE\\|HWADDR\\|MTU\\|PATH\\|ROUTE\\|GATEWAY\\)'",
+        "command": "nmcli device show wlan0|grep -v '\\(DEVICE\\|TYPE\\|HWADDR\\|MTU\\|PATH\\|ROUTE\\|GATEWAY\\)'",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -3138,7 +3205,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "$round(($lookup(msg.payload, 'Tank 1') + $lookup(msg.payload, 'Tank 2')) / 2.0)",
+                "to": "$round((($lookup(msg.payload, 'Tank 1 [%]')) + ($lookup(msg.payload, 'Tank 2 [%]'))) / 2.0)",
                 "tot": "jsonata"
             }
         ],
@@ -3382,7 +3449,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon icon=\"mdi-battery-high\" color=\"#ffffff\"></v-icon>\n        <span style=\"font-size: 1.25rem\">{{battery_temperature}} ºC</span>\n        &nbsp;&nbsp;\n        <v-icon icon=\"mdi-raspberry-pi\" color=\"#ffffff\"></v-icon>\n        <span style=\"font-size: 1.25rem\">{{cpu_temperature}} ºC</span>        \n        &nbsp;&nbsp;\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n        &nbsp;&nbsp;\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n                cpu_temperature: \"0.0\",\n                battery_temperature: \"0.0\"\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0 ?? false\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n                this.cpu_temperature = this.msg.payload.cpu_temperature ?? \"0.0\"\n                this.battery_temperature = this.msg.payload.battery_temperature ?? \"0.0\"\n            }\n        }\n    }\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon icon=\"mdi-battery-high\" color=\"#ffffff55\"></v-icon>\n        <span color=\"#ffffff\" style=\"font-size: 1.25rem\">{{battery_temperature}} ºC</span>\n        &nbsp;&nbsp;\n        <v-icon icon=\"mdi-raspberry-pi\" color=\"#ffffff55\"></v-icon>\n        <span color=\"#ffffff\" style=\"font-size: 1.25rem\">{{cpu_temperature}} ºC</span>        \n        &nbsp;&nbsp;\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n        &nbsp;&nbsp;\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n                cpu_temperature: \"0.0\",\n                battery_temperature: \"0.0\"\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0 ?? false\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n                this.cpu_temperature = this.msg.payload.cpu_temperature ?? \"0.0\"\n                this.battery_temperature = this.msg.payload.battery_temperature ?? \"0.0\"\n            }\n        }\n    }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -3398,7 +3465,7 @@
         "id": "8b577b52f92292fb",
         "type": "exec",
         "z": "f8aa3235cf2ec5d8",
-        "command": "nmcli device show wlan1|grep 'GENERAL.CONNECTION'|cut -d : -f 2|xargs echo -n|sed -e 's/-//g'",
+        "command": "nmcli device show wlan0|grep 'GENERAL.CONNECTION'|cut -d : -f 2|xargs echo -n|sed -e 's/-//g'",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
