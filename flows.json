@@ -51,6 +51,28 @@
         "icon": "home",
         "layout": "grid",
         "theme": "65d08f24e020703e",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
         "order": 1,
         "className": "",
         "visible": "true",
@@ -78,10 +100,32 @@
         "icon": "battery-high",
         "layout": "grid",
         "theme": "65d08f24e020703e",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
         "order": 4,
         "className": "",
         "visible": "true",
-        "disabled": "false"
+        "disabled": false
     },
     {
         "id": "767b6a32326315fd",
@@ -94,7 +138,8 @@
         "showTitle": true,
         "className": "my-row-span-3",
         "visible": "true",
-        "disabled": "false"
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "949188085ecf898f",
@@ -105,10 +150,32 @@
         "icon": "white-balance-sunny",
         "layout": "grid",
         "theme": "65d08f24e020703e",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
         "order": 3,
         "className": "",
         "visible": "true",
-        "disabled": "false"
+        "disabled": false
     },
     {
         "id": "b6dffcc7f93dd2cd",
@@ -121,7 +188,8 @@
         "showTitle": true,
         "className": "",
         "visible": "true",
-        "disabled": "false"
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "ab8d8a0602f7be5f",
@@ -147,7 +215,8 @@
         "showTitle": true,
         "className": "my-row-span-3",
         "visible": "true",
-        "disabled": "false"
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "4a46055ef71bd0a1",
@@ -158,7 +227,29 @@
         "icon": "gas-cylinder",
         "layout": "grid",
         "theme": "65d08f24e020703e",
-        "order": 5,
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 6,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -211,7 +302,29 @@
         "icon": "wrench",
         "layout": "grid",
         "theme": "e3486d2647da3ab8",
-        "order": 9,
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 10,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -396,7 +509,7 @@
                 "cols": "12"
             }
         ],
-        "order": 7,
+        "order": 8,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -440,29 +553,29 @@
         "breakpoints": [
             {
                 "name": "Default",
-                "px": 0,
-                "cols": 3
+                "px": "0",
+                "cols": "3"
             },
             {
                 "name": "Tablet",
-                "px": 576,
-                "cols": 6
+                "px": "576",
+                "cols": "6"
             },
             {
                 "name": "Small Desktop",
-                "px": 768,
-                "cols": 9
+                "px": "768",
+                "cols": "9"
             },
             {
                 "name": "Desktop",
-                "px": 1024,
-                "cols": 12
+                "px": "1024",
+                "cols": "12"
             }
         ],
-        "order": 8,
+        "order": 9,
         "className": "",
-        "visible": true,
-        "disabled": false
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "fdacafbad7bf9046",
@@ -495,10 +608,10 @@
                 "cols": "12"
             }
         ],
-        "order": 6,
+        "order": 7,
         "className": "",
-        "visible": true,
-        "disabled": false
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "fb361d8cf79263ff",
@@ -517,6 +630,56 @@
             "groupBorderRadius": "0px",
             "widgetGap": "0px"
         }
+    },
+    {
+        "id": "6bb5a57f93b8cd26",
+        "type": "ui-page",
+        "name": "Temperature",
+        "ui": "718f5fabaac10b79",
+        "path": "/temperature",
+        "icon": "thermometer",
+        "layout": "grid",
+        "theme": "65d08f24e020703e",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 5,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "239c72cc7c0270f1",
+        "type": "ui-group",
+        "name": "Temperature [ºC]",
+        "page": "6bb5a57f93b8cd26",
+        "width": "9",
+        "height": "6",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "322d6acb8e1cc698",
@@ -1314,13 +1477,15 @@
         "y": 1160,
         "wires": [
             [
-                "899a8ccc502c637f"
-            ],
-            [
-                "899a8ccc502c637f"
-            ],
-            [
+                "899a8ccc502c637f",
                 "9896f80b9b94bef5"
+            ],
+            [
+                "899a8ccc502c637f",
+                "4d0f5f2a7008c756"
+            ],
+            [
+                "bc8b5fc2957fd942"
             ]
         ]
     },
@@ -1366,16 +1531,16 @@
         "id": "9896f80b9b94bef5",
         "type": "debug",
         "z": "f8aa3235cf2ec5d8",
-        "name": "debug 5",
+        "name": "cc",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload.address",
+        "complete": "payload",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
+        "x": 570,
         "y": 1280,
         "wires": []
     },
@@ -3436,7 +3601,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon icon=\"mdi-thermometer-water\" color=\"#ffffff55\"></v-icon>\n        <span color=\"#ffffff\" style=\"font-size: 1.25rem\">{{water_pump_temperature}} ºC</span>\n        &nbsp;&nbsp;\n        <v-icon icon=\"mdi-battery-high\" color=\"#ffffff55\"></v-icon>\n        <span color=\"#ffffff\" style=\"font-size: 1.25rem\">{{battery_temperature}} ºC</span>\n        &nbsp;&nbsp;\n        <v-icon icon=\"mdi-raspberry-pi\" color=\"#ffffff55\"></v-icon>\n        <span color=\"#ffffff\" style=\"font-size: 1.25rem\">{{cpu_temperature}} ºC</span>        \n        &nbsp;&nbsp;\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n        &nbsp;&nbsp;\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n                cpu_temperature: \"0.0\",\n                battery_temperature: \"0.0\",\n                water_pump_temperature: \"0.0\"\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0 ?? false\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n                this.cpu_temperature = this.msg.payload.cpu_temperature ?? \"0.0\"\n                this.battery_temperature = this.msg.payload.battery_temperature ?? \"0.0\"\n                this.water_pump_temperature = this.msg.payload.water_pump_temperature ?? \"0.0\"\n            }\n        }\n    }\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-icon icon=\"mdi-water\" color=\"#ffffff55\"></v-icon>\n        <span color=\"#ffffff\" style=\"font-size: 1.25rem\">{{water_pump_temperature}} ºC</span>\n        &nbsp;&nbsp;\n        <v-icon icon=\"mdi-battery-high\" color=\"#ffffff55\"></v-icon>\n        <span color=\"#ffffff\" style=\"font-size: 1.25rem\">{{battery_temperature}} ºC</span>\n        &nbsp;&nbsp;\n        <v-icon icon=\"mdi-raspberry-pi\" color=\"#ffffff55\"></v-icon>\n        <span color=\"#ffffff\" style=\"font-size: 1.25rem\">{{cpu_temperature}} ºC</span>        \n        &nbsp;&nbsp;\n        <v-icon v-if=\"is_connected_to_wifi\" icon=\"mdi-wifi\" color=\"#ffffff\"></v-icon>\n        <v-icon v-if=\"!is_connected_to_venus\" icon=\"mdi-alert\" color=\"#ffffff\"></v-icon>\n        &nbsp;&nbsp;\n    </Teleport>\n</template>\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false,\n                is_connected_to_wifi: true,\n                is_connected_to_venus: false,\n                cpu_temperature: \"0.0\",\n                battery_temperature: \"0.0\",\n                water_pump_temperature: \"0.0\"\n            }\n        },\n        mounted() {\n            this.mounted = true\n        },\n        watch: {\n            msg: function() {\n                this.is_connected_to_wifi = this.msg.payload.wifi_network_name?.length > 0 ?? false\n                this.is_connected_to_venus = this.msg.payload.is_alive ?? false\n                this.cpu_temperature = this.msg.payload.cpu_temperature ?? \"0.0\"\n                this.battery_temperature = this.msg.payload.battery_temperature ?? \"0.0\"\n                this.water_pump_temperature = this.msg.payload.water_pump_temperature ?? \"0.0\"\n            }\n        }\n    }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -3691,7 +3856,8 @@
         "wires": [
             [
                 "e072109cfb873318",
-                "08d71e4cfde08fe9"
+                "08d71e4cfde08fe9",
+                "7c326f3a737a60dc"
             ],
             [],
             []
@@ -3822,7 +3988,7 @@
         "path": "/Dc/0/Temperature",
         "serviceObj": {
             "service": "com.victronenergy.vebus/276",
-            "name": "0. Multiplus"
+            "name": "Multiplus"
         },
         "pathObj": {
             "path": "/Dc/0/Temperature",
@@ -3832,12 +3998,13 @@
         "name": "",
         "onlyChanges": false,
         "roundValues": "1",
-        "x": 210,
+        "x": 200,
         "y": 3000,
         "wires": [
             [
                 "93a8c4d27f4844b1",
-                "0cddfe52496e0802"
+                "0cddfe52496e0802",
+                "8c8a117b2aa58552"
             ]
         ]
     },
@@ -3877,7 +4044,8 @@
         "wires": [
             [
                 "6cca4289cba7847c",
-                "9385f51bc3383276"
+                "9385f51bc3383276",
+                "0c12b0ce814b5f25"
             ]
         ]
     },
@@ -3922,6 +4090,331 @@
         "wires": [
             [
                 "f0ba03a41bd4a6cf"
+            ]
+        ]
+    },
+    {
+        "id": "4d0f5f2a7008c756",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "cc",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "bc8b5fc2957fd942",
+        "type": "debug",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "other",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.address",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "ed1cb184d7fc4269",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Water Pump",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 3200,
+        "wires": [
+            [
+                "ac8954fd52b8e9dd"
+            ]
+        ]
+    },
+    {
+        "id": "ac8954fd52b8e9dd",
+        "type": "ui-chart",
+        "z": "f8aa3235cf2ec5d8",
+        "group": "239c72cc7c0270f1",
+        "name": "Temperature History",
+        "label": "",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "property",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "40",
+        "bins": "",
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": true,
+        "removeOlder": "3",
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "",
+        "colors": [
+            "#9467bd",
+            "#0096ff",
+            "#2ca02c",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "9",
+        "height": "6",
+        "className": "",
+        "interpolation": "linear",
+        "x": 1360,
+        "y": 3200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d842844197d17cc",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Battery",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 3260,
+        "wires": [
+            [
+                "ac8954fd52b8e9dd"
+            ]
+        ]
+    },
+    {
+        "id": "0a60c703b432a505",
+        "type": "change",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Raspberry PI",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 3320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c12b0ce814b5f25",
+        "type": "delay",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3200,
+        "wires": [
+            [
+                "153df6a5d3fc8bd7"
+            ]
+        ]
+    },
+    {
+        "id": "153df6a5d3fc8bd7",
+        "type": "trigger",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "-10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 710,
+        "y": 3200,
+        "wires": [
+            [
+                "ed1cb184d7fc4269"
+            ]
+        ]
+    },
+    {
+        "id": "8c8a117b2aa58552",
+        "type": "delay",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3260,
+        "wires": [
+            [
+                "f7b5262cb76848b6"
+            ]
+        ]
+    },
+    {
+        "id": "f7b5262cb76848b6",
+        "type": "trigger",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "-10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 710,
+        "y": 3260,
+        "wires": [
+            [
+                "0d842844197d17cc"
+            ]
+        ]
+    },
+    {
+        "id": "7c326f3a737a60dc",
+        "type": "delay",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3320,
+        "wires": [
+            [
+                "947aa7d6f6f9c062"
+            ]
+        ]
+    },
+    {
+        "id": "947aa7d6f6f9c062",
+        "type": "trigger",
+        "z": "f8aa3235cf2ec5d8",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "-10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 710,
+        "y": 3320,
+        "wires": [
+            [
+                "0a60c703b432a505"
             ]
         ]
     }
